@@ -28,6 +28,6 @@ Namun tentunya agar data dapat dimanfaatkan untuk keperluan analisa diperlukan c
 *	Pasien lebih mudah dalam mengelola rutinitas minum obatnya
 *	Dokter dapat lebih akurat memberikan nasehat perawatan lanjutan
 *	Potensi pemanfaatan data untuk dianalisa:
-  -	sehingga rumah sakit / dokter dapat mengetahui efektivitas setiap obat dengan lebih baik
-  -	rumah sakit / dokter memiliki data mana obat yang paling efektif untuk mengobati gejala / penyakit tertentu.
+  * sehingga rumah sakit / dokter dapat mengetahui efektivitas setiap obat dengan lebih baik
+  * rumah sakit / dokter memiliki data mana obat yang paling efektif untuk mengobati gejala / penyakit tertentu.
 
