@@ -31,3 +31,5 @@ Namun tentunya agar data dapat dimanfaatkan untuk keperluan analisa diperlukan c
   * sehingga rumah sakit / dokter dapat mengetahui efektivitas setiap obat dengan lebih baik
   * rumah sakit / dokter memiliki data mana obat yang paling efektif untuk mengobati gejala / penyakit tertentu.
 
+## Technology Component 
+![Pic 1](Images/01_Tech_Comp.png)
