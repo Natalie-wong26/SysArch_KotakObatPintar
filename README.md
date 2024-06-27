@@ -25,11 +25,11 @@ Selain itu, terdapat peluang untuk memanfaatkan data dari sistem tersebut untuk 
 Namun tentunya agar data dapat dimanfaatkan untuk keperluan analisa diperlukan consent dari pasien terlebih dahulu. Pengelolaan data juga harus memperhatikan kepatuhannya terhadap peraturan regulator seperti UU Perlindungan Data Pribadi (UU PDP)
 
 ## Expected Impact
-*	Pasien lebih mudah dalam mengelola rutinitas minum obatnya
-*	Dokter dapat lebih akurat memberikan nasehat perawatan lanjutan
-*	Potensi pemanfaatan data untuk dianalisa:
-  * sehingga rumah sakit / dokter dapat mengetahui efektivitas setiap obat dengan lebih baik
-  * rumah sakit / dokter memiliki data mana obat yang paling efektif untuk mengobati gejala / penyakit tertentu.
+-	Pasien lebih mudah dalam mengelola rutinitas minum obatnya
+-	Dokter dapat lebih akurat memberikan nasehat perawatan lanjutan
+-	Potensi pemanfaatan data untuk dianalisa:
+     - sehingga rumah sakit / dokter dapat mengetahui efektivitas setiap obat dengan lebih baik
+     - rumah sakit / dokter memiliki data mana obat yang paling efektif untuk mengobati gejala / penyakit tertentu.
 
 ## Technology Component 
 ![Pic 1](Images/01_Tech_Comp.png)
