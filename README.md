@@ -21,7 +21,7 @@ Sistem kotak pintar ini juga dapat diatur untuk mengirimkan data ke aplikasi / s
 Selain itu, terdapat peluang untuk memanfaatkan data dari sistem tersebut untuk melakukan analisa seperti:
 *	Keefektifan obat tertentu dalam mengobati gejala / penyakit jika obat rutin di minum
 *	Berapa kali obat harus diminum sampai gejala membaik?
-*	Dll.
+*	Dll.</br>
 Namun tentunya agar data dapat dimanfaatkan untuk keperluan analisa diperlukan consent dari pasien terlebih dahulu. Pengelolaan data juga harus memperhatikan kepatuhannya terhadap peraturan regulator seperti UU Perlindungan Data Pribadi (UU PDP)
 
 ## Expected Impact
@@ -33,3 +33,35 @@ Namun tentunya agar data dapat dimanfaatkan untuk keperluan analisa diperlukan c
 
 ## Technology Component 
 ![Pic 1](Images/01_Tech_Comp.png)
+
+## System Architecture
+![Pic 2](Images/02_Sys_Arch.png)
+**Note:**
+![Pic 3](Images/03_Note.png)
+
+**Penjelasan gambar:**
+1.	Pasien memasukkan obat dari kotak obat
+2a.	Sensor FR 402 mengirimkan data ke ESP 32
+2b.	ESP 32 mengirimkan data ke smartphone via bluetooth untuk ditampilkan
+2c.	Pasien memasukkan informasi seperti nama obat, dosis, jadwal dan mengatur alarm
+3a.	Smartphone mengirimkan data ke ESP 32
+3b.	ESP 32 mengirimkan command ke LED untuk menyala
+3c.	Smartphone memberi alert / peringatan pada pasien
+4.	Pasien mengambil obat
+5a.	Sensor FR 402 mengirimkan data ke ESP 32
+5b.	Sensor mengirimkan data ke smartphone untuk mengupdate informasi
+6.	Smartphone mengirimkan data ke server rumah sakit dan disimpan di DB Server via REST API
+7.	Proses ETL (Extract, Transform and Load) ke DWH (Data Warehouse)
+8.	Data diturunkan ke datamarts
+9.	Data diambil users untuk dimanfaatkan, misalnya untuk analysis atau pembuatan dashboards
+
+**Penjelasan tambahan:**
+Tahap 1 – 2c
+•	Pada tahap 1 – 2c, pasien melakukan ‘pendaftaran obat’ pada aplikasi di smartphone pasien. 
+•	Pasien akan menambahkan obat baru pada aplikasi kemudian memasukkan 1 tablet untuk dibaca beratnya oleh sensor tekanan FR 402.
+•	Setelah sensor memperoleh berat per 1 tablet, data berat tersebut akan dikirimkan ke esp 32 kemudian diteruskan ke smartphone.
+•	Pasien kemudian memasukkan seluruh obatnya dan proses 2a s/d 2c akan berulang lagi, namun dengan tambahan proses di aplikasi yang akan mengalkulasi jumlah tablet yang dimasukkan berdasarkan berat satuannya.
+•	Pasien kemudian memasukkan informasi lainnya seperti nama obat, dosis, dan jadwal untuk mengatur alert.
+Tahap 6
+•	Data yang dikirimkan berupa nama obat, dosis obat, frekuensi minum obat, jumlah obat yang diminum, dan waktu ketika pasien meminum obat. 
+
